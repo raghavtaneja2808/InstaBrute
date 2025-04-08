@@ -59,7 +59,7 @@ Designed to avoid detection by Instagram's bot protection.
 ```bash
 git clone https://github.com/yourusername/instagram-password-cracker.git
 cd InstaBrute
-cd instbrute
+cd instabrute
 ```
 
 ### 📦 Step 2: Install Dependencies
